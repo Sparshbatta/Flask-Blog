@@ -1,0 +1,20 @@
+{
+    "params":{
+        "local_server":"True",
+        "local_uri":"mysql://root:@localhost/techstack",
+        "prod_uri":"mysql://root:@localhost/techstack",
+        "fb_url":"https://facebook.com/techstack2",
+        "tw_url":"https://twitter.com/techstack2",
+        "gh_url":"https://github.com/techstack2",
+        "blog_name":"TechStack",
+        "tag_line":"Your Genuine Tech Blog Destination",
+        "gmail_user":"abc786867@gmail.com",
+        "gmail_password":"vqlqcyyqpcyyeqlq",
+        "about_text": "This blog will quench your tech. thirst by making you dive into the ocean of endless tech. blogs and articles. Hope you like it!",
+        "num_posts": 3,
+        "login_image":"login.png",
+        "admin_user":"argus@gmail.com",
+        "admin_password":"septum",
+        "upload_location":"E:\\Flask Tutorial\\Tut1\\static\\admin\\img"
+    }
+}

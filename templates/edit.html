@@ -1,0 +1,61 @@
+{% extends 'layout.html' %}
+{% block body %}
+<link href="{{url_for('static', filename='css/dashboard.css')}}" rel="stylesheet">
+<header class="masthead" style="background-image: url('{{url_for('static', filename='assets/img/home-bg.jpg')}}')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="site-heading">
+                    <h1>Admin Panel</h1>
+                    <span class="subheading">Manage your posts and change them</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            <h1>Basic Actions</h1>
+            <a href="/dashboard"><button class="btn btn-primary">Dashboard Home</button></a>
+            <a href="/logout"><button class="btn btn-primary">Logout</button></a>
+            <br/>
+            <br/>
+            <h1>Add/Edit Post</h1>
+            <form id="contactForm" data-sb-form-api-token="API_TOKEN" action="/edit/{% if post.no %}{{post.sno}}{% else %}0{% endif %}" method="post" enctype= multipart/form-data>
+                <div class="form-floating">
+                    <input class="form-control" id="title" name="title" type="text" placeholder="Title"
+                        data-sb-validations="required" />
+                    <label for="name">Title</label>
+            
+                </div>
+                <div class="form-floating">
+                    <input class="form-control" id="tagline" name="tagline" type="text" placeholder="Tagline" />
+                    <label for="tagline">Tagline</label>
+                </div>
+                <div class="form-floating">
+                    <input class="form-control" id="slug" name="slug" type="tel"
+                        placeholder="Slug" />
+                    <label for="slug">Slug</label>
+                </div>
+                <div class="form-floating">
+                    <input class="form-control" id="description" name="description" placeholder="Description"></input>
+                    <label for="description">Description</label>
+                </div>
+                <div class="form-floating">
+                    <input class="form-control" id="post_image" name="post_image" type="text"
+                        placeholder="Image" />
+                    <label for="post_image">Post Image</label>
+                </div>
+                <br />
+                <!-- Submit Button-->
+                <button class="btn btn-primary text-uppercase" id="submitButton" type="submit">Send</button>
+                <br/>
+                <br/>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
