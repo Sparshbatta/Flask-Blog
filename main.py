@@ -48,6 +48,7 @@ class Posts(db.Model):
     image_url = db.Column(db.String(12), nullable=True)
 
 
+#all routes
 @app.route("/")
 def home():
 
